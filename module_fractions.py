@@ -114,7 +114,7 @@ class Fraction:
             self.n = int(str(self.n).replace(".", ""))
             self.d = int(self.d * pow(10, n))
 
-    def __repr__(self):
+    def __str__(self):
         self.deflate()
         return f"({self.n}/{self.d})"
 
