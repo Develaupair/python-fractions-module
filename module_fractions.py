@@ -51,7 +51,7 @@ equals(other) -> wrapper for __eq__(other) object method
 deflate() -> shortens the fraction so that equality can be determined correctly
 internalMul(integer) -> multiplies both the nominator and the denominator with a given int type number
 visualInflation() -> inflates floating point nominator in fraction to an int type without loss of precision
-__repr__() -> returns visual representation of fraction, also used for equality comparison
+__str__() -> returns visual representation of fraction, also used for print() object method
 """
 
 
