@@ -1,3 +1,6 @@
 .git
 .idea
 __pycache__
+*.py
+!module_fractions.py
+
