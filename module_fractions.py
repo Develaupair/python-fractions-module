@@ -44,7 +44,7 @@ __truediv__(other) -> implements division, other can be int, float, or Fraction
 div(other) -> wrapper for __truediv__(other) object method
 
 (COMPARISON OPERATORS)
-__eq__(other) -> checks for equality based on the visual representation
+__eq__(other) -> checks for equality based on the string representation
 equals(other) -> wrapper for __eq__(other) object method
 
 (INTERNAL METHODS)
@@ -182,7 +182,10 @@ class Fraction:
         return self / other
 
     def __eq__(self, other):
-        return self.__repr__() == other.__repr__()
+        if type(other) != Fraction:
+            other = Fraction(other)
+        assert type(other) == Fraction
+        return self.getn() == other.getn() and self.getd() == other.getd()
 
     def equals(self, other):
         return self == other
