@@ -106,8 +106,10 @@ class Fraction:
         return self.d
 
     def setn(self, nominator):
-        assert type(nominator) == int  # TODO float support
+        assert type(nominator) == int or type(nominator) == float
         self.n = nominator
+        self.visualInflation()
+        self.deflate()
 
     def setd(self, denominator):
         assert type(denominator) == int
